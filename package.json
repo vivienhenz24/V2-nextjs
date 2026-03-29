@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "favicon": "node scripts/generate-favicon.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
