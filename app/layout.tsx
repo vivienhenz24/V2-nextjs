@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { IBM_Plex_Sans, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const hikasami = localFont({
-  src: "../fonts/variable/Hikasami-VF.woff2",
-  variable: "--font-hikasami",
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans",
 });
 
 export const metadata: Metadata = {
@@ -18,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${hikasami.variable} antialiased`}>
+    <html lang="en" className={cn("font-sans", geist.variable)}>
+      <body className={`${ibmPlexSans.variable} antialiased`}>
         {children}
       </body>
     </html>
