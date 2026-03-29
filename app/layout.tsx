@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-ibm-plex-sans",
+const family = localFont({
+  src: [
+    {
+      path: "../KlimTestFonts/Test web fonts (Variable, WOFF2)/Test Family/test-family-vf-roman.woff2",
+      style: "normal",
+    },
+    {
+      path: "../KlimTestFonts/Test web fonts (Variable, WOFF2)/Test Family/test-family-vf-italic.woff2",
+      style: "italic",
+    },
+  ],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -22,9 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${ibmPlexSans.variable} antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${family.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
