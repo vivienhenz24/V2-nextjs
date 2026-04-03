@@ -39,11 +39,11 @@ export function Hero() {
         <h1 className="font-sans tracking-tight font-normal text-foreground text-xl sm:text-4xl md:text-5xl lg:text-6xl">
           Run voice AI agents on any device.
         </h1>
-        <p className="font-heading mt-5 max-w-2xl text-center text-base leading-relaxed text-foreground sm:text-lg">
+        <p className="font-heading mt-5 max-w-2xl text-center text-sm leading-relaxed text-foreground sm:text-base md:text-lg lg:text-xl">
           Ready-made local voice agents on any stack, any device, with memory and performance handled out of the box.
         </p>
       </div>
-      <div className="absolute inset-x-0 bottom-[76px] flex items-center justify-center gap-8 px-6 text-sm text-muted-foreground">
+      <div className="absolute inset-x-0 bottom-[76px] flex flex-col items-center justify-center gap-3 px-6 text-sm text-muted-foreground sm:flex-row sm:gap-8">
         <p>Cambridge, MA {times.cambridge}</p>
         <a
           href="mailto:vivien@vsqrd.com,vikram@vsqrd.com"
