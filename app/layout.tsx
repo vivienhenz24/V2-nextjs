@@ -6,11 +6,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 const family = localFont({
   src: [
     {
-      path: "../KlimTestFonts/Test web fonts (Variable, WOFF2)/Test Family/test-family-vf-roman.woff2",
+      path: "../fonts/family/test-family-vf-roman.woff2",
       style: "normal",
     },
     {
-      path: "../KlimTestFonts/Test web fonts (Variable, WOFF2)/Test Family/test-family-vf-italic.woff2",
+      path: "../fonts/family/test-family-vf-italic.woff2",
       style: "italic",
     },
   ],

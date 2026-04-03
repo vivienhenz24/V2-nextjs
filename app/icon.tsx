@@ -11,10 +11,7 @@ export const contentType = 'image/png'
 
 export default function Icon() {
   const fontData = readFileSync(
-    path.join(
-      process.cwd(),
-      'KlimTestFonts/Test desktop fonts (Static, OTF)/Test Family/TestFamily-Regular.otf'
-    )
+    path.join(process.cwd(), 'fonts/family/TestFamily-Regular.otf')
   )
 
   return new ImageResponse(

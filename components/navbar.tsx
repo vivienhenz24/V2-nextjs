@@ -16,20 +16,14 @@ export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
-        <NavigationMenu>
+        <NavigationMenu className="font-heading">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/" className="font-semibold text-sm">
+              <NavigationMenuLink href="/" className="font-normal text-muted text-sm">
                 V2
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/docs">Docs</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/pricing">Pricing</NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
+            </NavigationMenuList>
         </NavigationMenu>
 
         <Button
